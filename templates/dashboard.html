@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href ="/create">Create State</a>
+     <!--{{data}} 
+    {% for x in data %}
+       {{x}}<br>
+    {% endfor %}-->
+    <table border="1">
+        <tr>
+            <td>Sr no.</td>
+            <td>Name</td>
+            <td>Capital</td>
+            <td>Population</td>
+            <td>Language</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+        {% for x in data %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.capital}}</td>
+            <td>{{x.population}}</td>
+            <td>{{x.language}}</td>
+            <td><a href="/edit/{{x.id}}">Edit</a></td>
+            <td><a href="/delete/{{x.id}}">Delete</a></td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

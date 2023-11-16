@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State</title>
+</head>
+<body>
+    <h1>Create Meassage</h1>
+    <form method="POST" action="/edit/{{data.id}}">
+        {% csrf_token %} 
+        <table>
+            <tr>
+                <td>Enter Name:</td>
+                <td><input type ="text" name="uname" value="{{data.name}}"/></td>
+                </tr><br>
+                <tr>
+                    <td>Capital:</td>
+                    <td><input type="text" name="ucapital"  value="{{data.capital}}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Population:</td>
+                        <td><input type="number" name="pop"  value="{{data.population}}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Language:</td>
+                            <td><input type="text" name="lang"  value="{{data.language}}"/></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="Update"></td>
+                        </tr>
+                        
+                    </tr>
+                    
+                </tr>
+     
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>
